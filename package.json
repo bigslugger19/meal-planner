@@ -1,22 +1,17 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.7.2",
-  "description": "CoreUI Free Angular 2+ Admin Template",
+  "name": "meal-planner",
+  "version": "0.0.1",
+  "description": "Meal planning and grocery inventory mangement app.",
   "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "name": "Aaron Jones",
+    "github": "https://github.com/bigslugger19"
   },
   "contributors": [
     {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
+      "name": "Aaron Jones",
+      "url": "https://github.com/bigslugger19"
     }
   ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2019 creativeLabs Łukasz Holeczek",
-  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
