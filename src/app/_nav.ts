@@ -4,11 +4,7 @@ export const navItems: INavData[] = [
   {
     name: 'Dashboard',
     url: '/dashboard',
-    icon: 'icon-speedometer',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
+    icon: 'icon-speedometer'
   },
   {
     title: true,
@@ -17,16 +13,16 @@ export const navItems: INavData[] = [
   {
     name: 'Meals',
     url: '/meals',
-    icon: 'icon-drop'
+    icon: 'fa fa-cutlery'
   },
   {
     name: 'Inventory',
     url: '/inventory',
-    icon: 'icon-drop'
+    icon: 'fa fa-list-alt'
   },
   {
     name: 'Grocery List',
     url: '/grocery-list',
-    icon: 'icon-drop'
+    icon: 'icon-basket-loaded'
   }
 ];
