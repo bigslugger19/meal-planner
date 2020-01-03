@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import {Ingredient, Meal} from '../../model/models';
 
 @Component({
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
+
+  todaysMeal: Meal;
 
   radioModel: string = 'Month';
 
@@ -378,11 +381,15 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // generate random values for mainChart
-    for (let i = 0; i <= this.mainChartElements; i++) {
-      this.mainChartData1.push(this.random(50, 200));
-      this.mainChartData2.push(this.random(80, 100));
-      this.mainChartData3.push(65);
-    }
+    this.todaysMeal = {
+      name: 'Chorizo Burritos',
+      ingredients: [
+        {name: 'Chorizo', minReq: 1, quantity: '1 Pound'},
+        {name: 'Potatos', minReq: 1, quantity: '3 Cups'},
+        {name: 'Cheese', minReq: 1, quantity: '8 ounces'},
+        {name: 'Tortillas', minReq: 1, quantity: '10 small'}
+      ],
+      instructions: 'here are some test instructions'
+    };
   }
 }

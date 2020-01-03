@@ -40,6 +40,7 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
+import { MealSummaryComponent } from './views/meal-summary/meal-summary.component';
 
 @NgModule({
   imports: [
@@ -68,6 +69,8 @@ import { ChartsModule } from 'ng2-charts';
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
-  bootstrap: [ AppComponent ]
+  exports: [
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
