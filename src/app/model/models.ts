@@ -10,3 +10,17 @@ export interface Ingredient {
   minReq: number;
   quantity: string;
 }
+
+export interface MeasurementUnit {
+  id: string;
+  name: string;
+}
+
+export interface InventoryItem {
+  id: string;
+  name: string;
+  quantityOnHand: number;
+  measurementUnit: MeasurementUnit;
+  editMode: boolean;
+  original: InventoryItem;
+}

@@ -41,6 +41,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { MealSummaryComponent } from './views/meal-summary/meal-summary.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -55,7 +56,8 @@ import { MealSummaryComponent } from './views/meal-summary/meal-summary.componen
     PerfectScrollbarModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,

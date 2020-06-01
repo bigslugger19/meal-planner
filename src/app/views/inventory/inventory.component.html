@@ -1,1 +1,65 @@
-<p>inventory works!</p>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-header">
+        <strong>Grocery Inventory</strong>
+      </div>
+      <div class="card-body">
+        <div class="row" *ngFor="let item of inventoryList">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input class="form-control" id="name" placeholder="Inventory Item Name" type="text"
+                     [(ngModel)]="item.name" >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header"><i class="fa fa-list-alt"></i> Grocery Inventory</div>
+  <div class="card-body">
+    <table class="table table-bordered table-striped table-sm">
+      <thead>
+      <tr>
+        <th>Iventory Item</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Edit</th>
+        <th>Remove</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of inventoryList">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantityOnHand }}</td>
+        <td>{{ item.measurementUnit.name }}</td>
+        <td *ngIf="!item.editMode">
+          <button class="btn btn-primary" type="button"
+                  (click)="editItem(item)">
+            <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
+          </button>
+        </td>
+        <td *ngIf="item.editMode">
+          <button class="btn btn-primary" type="button"
+                  (click)="saveItem(item)">
+            <i class="fa fa-floppy-o"></i>&nbsp; Save
+          </button>
+          <button class="btn btn-primary" type="button"
+                  (click)="cancelEdit(item)">
+            <i class="fa fa-undo"></i>&nbsp; Cancel
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-primary" type="button">
+            <i class="fa fa-trash-o"></i>&nbsp; Remove
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
